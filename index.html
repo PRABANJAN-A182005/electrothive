@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stylish Hero Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom underline hover effect */
+      .nav-link {
+        position: relative;
+        display: inline-block;
+      }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #ffffff;
+        transition: width 0.3s ease-in-out;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="m-0 p-0">
+<section>
+  <!-- Hero Section with Background Image -->
+<section
+  id="home"
+  class="relative min-h-screen bg-cover bg-center bg-no-repeat"
+  style="background-image: url('images/home.png');"
+>
+  <!-- Glassy Navbar -->
+  <nav class="w-full fixed top-0 left-0 z-50 backdrop-blur-md bg-black/30 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="text-white text-2xl font-bold tracking-wider drop-shadow-md">
+        <img class="w-28" src="images/ecltrothrive-cutout.png" alt="Electro Thrive Logo" />
+      </div>
+
+      <!-- Desktop Navigation -->
+      <ul class="hidden md:flex items-center space-x-8 text-white font-medium">
+        <li><a href="#home" class="nav-link hover:text-pink-400 transition">Home</a></li>
+        <li><a href="#about" class="nav-link hover:text-pink-400 transition">About</a></li>
+        <li><a href="#events" class="nav-link hover:text-pink-400 transition">Events</a></li>
+        <li><a href="#departments" class="nav-link hover:text-pink-400 transition">Departments</a></li>
+        <li><a href="#coordinators" class="nav-link hover:text-pink-400 transition">Co-ordinators</a></li>
+        <li><a href="#contact" class="nav-link hover:text-pink-400 transition">Contact</a></li>
+        <!-- Register Button (Hidden on Mobile) -->
+        <li>
+          <a
+            href="#register"
+            class="hidden lg:inline-block bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300"
+          >
+            Register Now
+          </a>
+        </li>
+      </ul>
+
+      <!-- Hamburger Button for Mobile -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+          <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col bg-black bg-opacity-90 text-white px-6 py-4 space-y-4">
+      <a href="#home" class="block nav-link">Home</a>
+      <a href="#about" class="block nav-link">About</a>
+      <a href="#events" class="block nav-link">Events</a>
+      <a href="#departments" class="block nav-link">Departments</a>
+      <a href="#coordinators" class="block nav-link">Co-ordinators</a>
+      <a href="#contact" class="block nav-link">Contact</a>
+      <!-- Register Button - Hidden on Mobile -->
+    </div>
+  </nav>
+
+  <!-- Hero Content -->
+  <div class="min-h-screen flex items-center justify-center md:justify-start px-6 pt-32 md:pt-40">
+    <div class="max-w-xl md:ml-16">
+      <!-- Neon Logo -->
+      <div class="mb-6">
+        <img src="images/ecltrothrive-cutout.png" alt="Electro Thrive" class="w-72 drop-shadow-[0_0_10px_#ff007f]" />
+      </div>
+
+      <!-- Tagline / Description -->
+      <p class="text-yellow-50 mb-8 text-lg leading-relaxed">
+        A battle of circuits, code, and creativity.<br />
+        <span class="text-pink-500 font-semibold">Electro Thrive 2025</span> is not just an event – it's a challenge to your tech instincts.
+        Join us for robotics, IoT games, coding clashes, and more with Squid Game-inspired energy.
+      </p>
+
+      <!-- Register Button (Only on Desktop & Tablet) -->
+    
+      <a
+            href="#register"
+            class=" bg-pink-600 hover:bg-pink-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300"
+          >
+            Register Now
+          </a>
+    </div>
+  </div>
+</section>
+</section>
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+<section id="about">
+  <!-- About Section: Squid Game Themed (Visible only on md and up) -->
+<section 
+  class="md:block  bg-[url('images/bk1.jpg')] bg-cover bg-center bg-no-repeat relative min-h-screen py-20 px-8"
+>
+  <!-- Overlay for readability -->
+  <div class="absolute inset-0 bg-black/70 z-0"></div>
+
+  <!-- Content Wrapper -->
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-pink-500 mb-16 text-center drop-shadow-[0_0_15px_#ff0080] tracking-wide uppercase">
+      About Electro Thrive
+    </h2>
+
+    <!-- Card 1: Event Overview -->
+    <div class="flex flex-col md:flex-row items-center mb-16">
+      <div class="md:w-1/2 p-6">
+        <div class="bg-white/5 backdrop-blur-md border border-pink-500/30 rounded-xl p-6 shadow-lg hover:shadow-pink-500/40 transition-all duration-300">
+          <h3 class="text-2xl font-bold text-pink-400 mb-2 tracking-wider uppercase">Event Overview</h3>
+          <p class="text-gray-200 leading-relaxed">
+            Electro Thrive 2025 is a national-level tech fest inspired by high-stakes challenges and creative survival. Step into a world of innovation, rivalry, and thrilling breakthroughs.
+          </p>
+        </div>
+      </div>
+      <div class="md:w-1/2"></div>
+    </div>
+
+    <!-- Card 2: Event Dates -->
+    <div class="flex flex-col md:flex-row-reverse items-center mb-16">
+      <div class="md:w-1/2 p-6">
+        <div class="bg-white/5 backdrop-blur-md border border-green-400/30 rounded-xl p-6 shadow-lg hover:shadow-green-400/40 transition-all duration-300">
+          <h3 class="text-2xl font-bold text-green-400 mb-2 tracking-wider uppercase">Event Dates</h3>
+          <p class="text-gray-200 leading-relaxed">
+            ⚡ <strong>Day 1</strong> – Sept 20, 2025: Paper Presentations, Workshops<br>
+            ⚡ <strong>Day 2</strong> – Sept 21, 2025: Tech Games, Project Expo, Closing Ceremony
+          </p>
+        </div>
+      </div>
+      <div class="md:w-1/2"></div>
+    </div>
+
+    <!-- Card 3: Agenda -->
+    <div class="flex flex-col md:flex-row items-center mb-16">
+      <div class="md:w-1/2 p-6">
+        <div class="bg-white/5 backdrop-blur-md border border-pink-500/30 rounded-xl p-6 shadow-lg hover:shadow-pink-500/40 transition-all duration-300">
+          <h3 class="text-2xl font-bold text-pink-400 mb-2 tracking-wider uppercase">Agenda</h3>
+          <p class="text-gray-200 leading-relaxed">
+            Expect intense tech battles, futuristic project showcases, electrifying workshops, and games that test your nerve and knowledge—only the boldest thrive.
+          </p>
+        </div>
+      </div>
+      <div class="md:w-1/2"></div>
+    </div>
+
+    <!-- Card 4: Achievements -->
+    <div class="flex flex-col md:flex-row-reverse items-center mb-16">
+      <div class="md:w-1/2 p-6">
+        <div class="bg-white/5 backdrop-blur-md border border-green-400/30 rounded-xl p-6 shadow-lg hover:shadow-green-400/40 transition-all duration-300">
+          <h3 class="text-2xl font-bold text-green-400 mb-2 tracking-wider uppercase">Achievements</h3>
+          <p class="text-gray-200 leading-relaxed">
+            500+ participants. 40+ colleges. 15+ awards. National-level recognition. Past winners have gone on to feature in leading tech journals and startup incubators.
+          </p>
+        </div>
+      </div>
+      <div class="md:w-1/2"></div>
+    </div>
+
+    <!-- Card 5: Awards & Prizes -->
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 p-6">
+        <div class="bg-white/5 backdrop-blur-md border border-pink-500/30 rounded-xl p-6 shadow-lg hover:shadow-pink-500/40 transition-all duration-300">
+          <h3 class="text-2xl font-bold text-pink-400 mb-2 tracking-wider uppercase">Awards & Prizes</h3>
+          <p class="text-gray-200 leading-relaxed">
+            🎖️ Cash prizes up to ₹30,000<br>
+            🎖️ Exclusive internship offers<br>
+            🎖️ Spotlight features on national platforms<br>
+            🎖️ Official certifications + Swag kits
+          </p>
+        </div>
+      </div>
+      <div class="md:w-1/2"></div>
+    </div>
+  </div>
+</section>
+</section>
+<!-- Event Section: Squid Game Inspired -->
+
+
+<!-- EVENTS SECTION -->
+<section id="events" class="bg-black bg-[url('images/res.png')] bg-cover bg-center bg-no-repeat relative py-20 px-8">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/80 z-0 " ></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto text-center text-white al">
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-pink-500 drop-shadow-md">Events</h2>
+    <p class="text-gray-300 text-lg mb-10">Dive into a variety of Technical and Non-Technical events inspired by the Squid Game universe.</p>
+
+    <!-- Event Category Buttons -->
+    <div class="flex flex-wrap justify-center gap-6 mb-12">
+      <button onclick="toggleContent('technicalEvents')" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">
+        Technical Events
+      </button>
+      <button onclick="toggleContent('nonTechnicalEvents')" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-green-500/30 transition-transform transform hover:scale-105 duration-300">
+        Non-Technical Events
+      </button>
+    </div>
+
+    <!-- TECHNICAL EVENTS -->
+    <div id="technicalEvents" class="toggle-content max-h-0 overflow-hidden opacity-0 transition-all duration-700 ease-in-out mt-8">
+      <div class="space-y-6 max-h-[500px] overflow-y-auto pr-2 scroll-fade-in scrollbar-squid">
+        
+        <!-- Event Card -->
+         <!-- Paper Presentation -->
+            <div class="bg-black/40 border-l-4 border-green-400 rounded-lg p-4 shadow-inner shadow-green-400/30 ">
+              <img src="https://via.placeholder.com/600x300.png?text=Paper+Presentation" alt="Paper Presentation"
+                class="w-full h-auto rounded-lg mb-4 border-2 border-green-400 shadow-md transition duration-300 hover:scale-[1.02]" />
+              <h4 class="text-green-300 text-xl font-semibold uppercase tracking-wider">Paper Presentation</h4>
+              <p class="text-gray-300">Showcase your innovative ideas through technical papers judged by experts.</p>
+              <div class="mt-4 flex flex-wrap gap-4 justify-center">
+                <a href="#register" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">Register Now</a>
+                <a href="techcomp/paper.html" class="bg-white text-pink-600 font-semibold py-2 px-6 rounded-full border-2 border-pink-600 hover:bg-pink-100 transition-transform transform hover:scale-105 duration-300">More Info</a>
+              </div>
+            </div>
+
+            <!-- Techno Quiz -->
+            <div class="bg-black/40 border-l-4 border-green-400 rounded-lg p-4 shadow-inner shadow-green-400/30">
+              <img src="https://via.placeholder.com/600x300.png?text=Techno+Quiz" alt="Techno Quiz"
+                class="w-full h-auto rounded-lg mb-4 border-2 border-green-400 shadow-md transition duration-300 hover:scale-[1.02]" />
+              <h4 class="text-green-300 text-xl font-semibold uppercase tracking-wider">Techno Quiz</h4>
+              <p class="text-gray-300">Test your technical awareness in a high-speed, high-stakes quiz face-off.</p>
+              <div class="mt-4 flex flex-wrap gap-4 justify-center">
+                <a href="#register" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">Register Now</a>
+                <a href="techcomp/technoquiz.html" class="bg-white text-pink-600 font-semibold py-2 px-6 rounded-full border-2 border-pink-600 hover:bg-pink-100 transition-transform transform hover:scale-105 duration-300">More Info</a>
+              </div>
+            </div>
+
+            <!-- Circuit Debugging -->
+            <div class="bg-black/40 border-l-4 border-green-400 rounded-lg p-4 shadow-inner shadow-green-400/30">
+              <img src="https://via.placeholder.com/600x300.png?text=Circuit+Debugging" alt="Circuit Debugging"
+                class="w-full h-auto rounded-lg mb-4 border-2 border-green-400 shadow-md transition duration-300 hover:scale-[1.02]" />
+              <h4 class="text-green-300 text-xl font-semibold uppercase tracking-wider">Circuit Debugging</h4>
+              <p class="text-gray-300">Decode malfunctioning circuits under pressure — no second chances.</p>
+              <div class="mt-4 flex flex-wrap gap-4 justify-center">
+                <a href="#register" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">Register Now</a>
+                <a href="techcomp/circuit.html" class="bg-white text-pink-600 font-semibold py-2 px-6 rounded-full border-2 border-pink-600 hover:bg-pink-100 transition-transform transform hover:scale-105 duration-300">More Info</a>
+              </div>
+            </div>
+
+      </div>
+    </div>
+
+    <!-- NON TECHNICAL EVENTS -->
+    <div id="nonTechnicalEvents" class="toggle-content max-h-0 overflow-hidden opacity-0 transition-all duration-700 ease-in-out mt-8 ">
+      <div class="space-y-6 max-h-[500px] overflow-y-auto pr-2 scroll-fade-in scrollbar-squid ">
+
+        <!-- Event Card -->
+       <div class="bg-black/40 border-l-4 border-green-400 rounded-lg p-4 shadow-inner shadow-green-400/30">
+              <img src="https://via.placeholder.com/600x300.png?text=E-Sports" alt="E-Sports"
+                class="w-full h-auto rounded-lg mb-4 border-2 border-green-400 shadow-md transition duration-300 hover:scale-[1.02]" />
+              <h4 class="text-green-300 text-xl font-semibold uppercase tracking-wider">E-Sports</h4>
+              <p class="text-gray-300">Battle it out in a digital arena. Only the most strategic survive.</p>
+              <div class="mt-4 flex flex-wrap gap-4 justify-center">
+                <a href="#register" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">Register Now</a>
+                <a href="notech/esports.html" class="bg-white text-pink-600 font-semibold py-2 px-6 rounded-full border-2 border-pink-600 hover:bg-pink-100 transition-transform transform hover:scale-105 duration-300">More Info</a>
+              </div>
+            </div>
+             <!-- IPL Auction -->
+  <div class="bg-black/40 border-l-4 border-green-400 rounded-lg p-4 shadow-inner shadow-green-400/30">
+    <img src="https://via.placeholder.com/600x300.png?text=IPL+Auction" alt="IPL Auction" class="w-full h-auto rounded-lg mb-4 border-2 border-green-400 shadow-md transition duration-300 hover:scale-[1.02]" />
+    <h4 class="text-green-300 text-xl font-semibold uppercase tracking-wider">IPL Auction</h4>
+    <p class="text-gray-300">Play the role of team manager and strategize your dream team in a mock IPL auction!</p>
+    <div class="mt-4 flex flex-wrap gap-4 justify-center">
+      <a href="#register" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">Register Now</a>
+      <a href="notech/iplauction.html" class="bg-white text-pink-600 font-semibold py-2 px-6 rounded-full border-2 border-pink-600 hover:bg-pink-100 transition-transform transform hover:scale-105 duration-300">More Info</a>
+    </div>
+  </div>
+
+  <!-- Group Dance -->
+  <div class="bg-black/40 border-l-4 border-green-400 rounded-lg p-4 shadow-inner shadow-green-400/30">
+    <img src="https://via.placeholder.com/600x300.png?text=Group+Dance" alt="Group Dance" class="w-full h-auto rounded-lg mb-4 border-2 border-green-400 shadow-md transition duration-300 hover:scale-[1.02]" />
+    <h4 class="text-green-300 text-xl font-semibold uppercase tracking-wider">Group Dance</h4>
+    <p class="text-gray-300">Show your team’s energy and coordination with a mesmerizing group dance performance.</p>
+    <div class="mt-4 flex flex-wrap gap-4 justify-center">
+      <a href="#register" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">Register Now</a>
+      <a href="event-details.html?event=Group+Dance" class="bg-white text-pink-600 font-semibold py-2 px-6 rounded-full border-2 border-pink-600 hover:bg-pink-100 transition-transform transform hover:scale-105 duration-300">More Info</a>
+    </div>
+  </div>
+
+  <!-- Solo Dance -->
+  <div class="bg-black/40 border-l-4 border-green-400 rounded-lg p-4 shadow-inner shadow-green-400/30">
+    <img src="https://via.placeholder.com/600x300.png?text=Solo+Dance" alt="Solo Dance" class="w-full h-auto rounded-lg mb-4 border-2 border-green-400 shadow-md transition duration-300 hover:scale-[1.02]" />
+    <h4 class="text-green-300 text-xl font-semibold uppercase tracking-wider">Solo Dance</h4>
+    <p class="text-gray-300">A solo stage to express your rhythm, moves, and inner fire.</p>
+    <div class="mt-4 flex flex-wrap gap-4 justify-center">
+      <a href="#register" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">Register Now</a>
+      <a href="event-details.html?event=Solo+Dance" class="bg-white text-pink-600 font-semibold py-2 px-6 rounded-full border-2 border-pink-600 hover:bg-pink-100 transition-transform transform hover:scale-105 duration-300">More Info</a>
+    </div>
+  </div>
+
+  <!-- Photography -->
+  <div class="bg-black/40 border-l-4 border-green-400 rounded-lg p-4 shadow-inner shadow-green-400/30">
+    <img src="https://via.placeholder.com/600x300.png?text=Photography" alt="Photography" class="w-full h-auto rounded-lg mb-4 border-2 border-green-400 shadow-md transition duration-300 hover:scale-[1.02]" />
+    <h4 class="text-green-300 text-xl font-semibold uppercase tracking-wider">Photography</h4>
+    <p class="text-gray-300">Capture the world through your lens and show your perspective in every shot.</p>
+    <div class="mt-4 flex flex-wrap gap-4 justify-center">
+      <a href="#register" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">Register Now</a>
+      <a href="event-details.html?event=Photography" class="bg-white text-pink-600 font-semibold py-2 px-6 rounded-full border-2 border-pink-600 hover:bg-pink-100 transition-transform transform hover:scale-105 duration-300">More Info</a>
+    </div>
+  </div>
+
+  <!-- Short Film -->
+  <div class="bg-black/40 border-l-4 border-green-400 rounded-lg p-4 shadow-inner shadow-green-400/30">
+    <img src="https://via.placeholder.com/600x300.png?text=Short+Film" alt="Short Film" class="w-full h-auto rounded-lg mb-4 border-2 border-green-400 shadow-md transition duration-300 hover:scale-[1.02]" />
+    <h4 class="text-green-300 text-xl font-semibold uppercase tracking-wider">Short Film</h4>
+    <p class="text-gray-300">Lights, camera, action! Tell your story in a short yet powerful cinematic journey.</p>
+    <div class="mt-4 flex flex-wrap gap-4 justify-center">
+      <a href="#register" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">Register Now</a>
+      <a href="event-details.html?event=Short+Film" class="bg-white text-pink-600 font-semibold py-2 px-6 rounded-full border-2 border-pink-600 hover:bg-pink-100 transition-transform transform hover:scale-105 duration-300">More Info</a>
+    </div>
+  </div>
+
+  <!-- Adaptune -->
+  <div class="bg-black/40 border-l-4 border-green-400 rounded-lg p-4 shadow-inner shadow-green-400/30">
+    <img src="https://via.placeholder.com/600x300.png?text=Adaptune" alt="Adaptune" class="w-full h-auto rounded-lg mb-4 border-2 border-green-400 shadow-md transition duration-300 hover:scale-[1.02]" />
+    <h4 class="text-green-300 text-xl font-semibold uppercase tracking-wider">Adaptune</h4>
+    <p class="text-gray-300">Dance to unpredictable tunes and surprise the audience with your adaptability.</p>
+    <div class="mt-4 flex flex-wrap gap-4 justify-center">
+      <a href="#register" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">Register Now</a>
+      <a href="notech/adaptune.html" class="bg-white text-pink-600 font-semibold py-2 px-6 rounded-full border-2 border-pink-600 hover:bg-pink-100 transition-transform transform hover:scale-105 duration-300">More Info</a>
+    </div>
+  </div>
+  <!-- Treasure Hunt -->
+<div class="bg-black/40 border-l-4 border-green-400 rounded-lg p-4 shadow-inner shadow-green-400/30">
+  <img src="https://via.placeholder.com/600x300.png?text=Treasure+Hunt" alt="Treasure Hunt" class="w-full h-auto rounded-lg mb-4 border-2 border-green-400 shadow-md transition duration-300 hover:scale-[1.02]" />
+  <h4 class="text-green-300 text-xl font-semibold uppercase tracking-wider">Treasure Hunt</h4>
+  <p class="text-gray-300">Decode clues, crack riddles, and race against time to uncover the ultimate treasure.</p>
+  <div class="mt-4 flex flex-wrap gap-4 justify-center">
+    <a href="#register" class="bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">Register Now</a>
+    <a href="notech/treasure.html" class="bg-white text-pink-600 font-semibold py-2 px-6 rounded-full border-2 border-pink-600 hover:bg-pink-100 transition-transform transform hover:scale-105 duration-300">More Info</a>
+  </div>
+</div>
+        <!-- Add more non-technical event cards here -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANIMATION + SCROLLBAR STYLES -->
+<style>
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scroll-fade-in > div {
+    animation: fadeInUp 0.8s ease-out both;
+  }
+
+  .scroll-fade-in > div:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .scroll-fade-in > div:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+
+  .scroll-fade-in > div:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+
+  .scrollbar-squid::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-squid::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-squid::-webkit-scrollbar-thumb {
+    background-color: #ff4dc4;
+    border-radius: 4px;
+  }
+</style>
+
+<!-- TOGGLE JS -->
+<script>
+  function toggleContent(id) {
+    const content = document.getElementById(id);
+    const isOpen = content.classList.contains('max-h-[500px]');
+    
+    document.querySelectorAll('.toggle-content').forEach(el => {
+      el.classList.remove('max-h-[500px]', 'opacity-100');
+      el.classList.add('max-h-0', 'opacity-0');
+    });
+
+    if (!isOpen) {
+      content.classList.remove('max-h-0', 'opacity-0');
+      content.classList.add('max-h-[500px]', 'opacity-100');
+    }
+  }
+</script>
+
+
+
+
+
+
+<!-- Department Section: Squid Game Vibe with Smooth Scrolling -->
+<section id="departments" class="relative bg-black bg-[url('images/depart.png')] bg-cover bg-center bg-no-repeat py-20 px-6 overflow-hidden">
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black/80 z-0"></div>
+
+  <!-- Content Wrapper -->
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-center text-pink-500 mb-16 drop-shadow-[0_0_15px_#ff0080] tracking-wide uppercase">
+      Our Department
+    </h2>
+    <h2 class="text-4xl font-bold text-center text-green-500 mb-16 drop-shadow-[0_0_15px_#ff0080] tracking-wide uppercase">
+      Staffs
+    </h2>
+
+    <!-- Horizontal Scrolling Container -->
+    <div class="relative overflow-x-auto whitespace-nowrap scroll-smooth snap-x snap-mandatory flex gap-6 px-2 py-4 animate-scroll">
+      <!-- Staff Cards -->
+      <!-- Repeat this 15 times -->
+      <!-- Card 1 -->
+      <div class="min-w-[250px] bg-white/5 backdrop-blur-md border border-pink-500/30 rounded-2xl shadow-lg hover:shadow-pink-500/50 transition-all duration-300 snap-start">
+        <img src="/assets/staff/staff1.jpg" alt="Staff 1" class="w-full h-56 object-cover rounded-t-2xl border-b border-pink-400">
+        <div class="p-4 text-center">
+          <h3 class="text-pink-400 text-xl font-bold uppercase tracking-wide">Dr. A. Kumar</h3>
+          <p class="text-gray-300 text-sm mt-1">Ph.D. in VLSI Design</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="min-w-[250px] bg-white/5 backdrop-blur-md border border-green-400/30 rounded-2xl shadow-lg hover:shadow-green-400/50 transition-all duration-300 snap-start">
+        <img src="/assets/staff/staff2.jpg" alt="Staff 2" class="w-full h-56 object-cover rounded-t-2xl border-b border-green-400">
+        <div class="p-4 text-center">
+          <h3 class="text-green-400 text-xl font-bold uppercase tracking-wide">Prof. B. Lakshmi</h3>
+          <p class="text-gray-300 text-sm mt-1">M.Tech - Embedded Systems</p>
+        </div>
+      </div>
+
+      <!-- Add 13 more staff cards similarly -->
+      <!-- Card 3 -->
+      <div class="min-w-[250px] bg-white/5 backdrop-blur-md border border-pink-500/30 rounded-2xl shadow-lg hover:shadow-pink-500/50 transition-all duration-300 snap-start">
+        <img src="/assets/staff/staff3.jpg" alt="Staff 3" class="w-full h-56 object-cover rounded-t-2xl border-b border-pink-400">
+        <div class="p-4 text-center">
+          <h3 class="text-pink-400 text-xl font-bold uppercase tracking-wide">Dr. C. Meena</h3>
+          <p class="text-gray-300 text-sm mt-1">Ph.D. - Signal Processing</p>
+        </div>
+      </div>
+
+      <!-- Continue with more cards -->
+      <!-- ... cards 4 to 15 ... -->
+       <style>
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll-left 10s linear infinite;
+}
+</style>
+
+
+    </div>
+  </div>
+</section>
+
+<section id="coordinators" class="relative bg-black bg-[url('images/coordinators.png')] bg-cover bg-center bg-no-repeat py-20 px-4 overflow-hidden">
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/80 z-0"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-center text-pink-500 drop-shadow-[0_0_10px_#ff3cac] tracking-widest uppercase mb-16">
+      Coordinators
+    </h2>
+
+    <!-- Scrollable Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      
+      <!-- Repeat this card to fill loop -->
+      <!-- CARD COMPONENT -->
+      <template id="card-template">
+        <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+          <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+          <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+          <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <!-- Generate 4 Columns -->
+      <div class="h-[500px] overflow-hidden relative">
+        <div class="scroll-group animate-scroll-down space-y-6">
+          <!-- Duplicate 1 card 6 times -->
+                  <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+                <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+                <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+                <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="h-[500px] overflow-hidden relative">
+        <div class="scroll-group animate-scroll-up space-y-6">
+                  <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+                <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+                <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+                <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="h-[500px] overflow-hidden relative">
+        <div class="scroll-group animate-scroll-down space-y-6">
+          <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+                <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+                <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+                <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="h-[500px] overflow-hidden relative">
+        <div class="scroll-group animate-scroll-up space-y-6">
+          <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+                <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+                <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+                <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+         <div class="card-custom">
+          <div class="flex justify-end px-4 pt-4">
+            <button class="text-gray-400 hover:text-white">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+                <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-center pb-6">
+            <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" src="/docs/images/people/profile-picture-3.jpg" alt="Bonnie" />
+            <h5 class="mb-1 text-lg font-medium text-white">Bonnie Green</h5>
+            <span class="text-sm text-gray-300">Visual Designer</span>
+            <div class="flex mt-3">
+              <a href="#" class="px-3 py-1 text-sm font-medium text-white bg-pink-600 hover:bg-pink-700 rounded-lg">Add</a>
+              <a href="#" class="py-1 px-3 ms-2 text-sm font-medium text-white border border-pink-500 hover:bg-pink-700 rounded-lg">Message</a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+@keyframes scrollDown {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0%); }
+}
+@keyframes scrollUp {
+  0% { transform: translateY(0%); }
+  100% { transform: translateY(-50%); }
+}
+
+.animate-scroll-down {
+  animation: scrollDown 30s linear infinite;
+}
+.animate-scroll-up {
+  animation: scrollUp 30s linear infinite;
+}
+
+.card-custom {
+  @apply w-full max-w-sm mx-auto bg-white/10 border border-pink-500/30 rounded-xl shadow-md backdrop-blur-md p-4 text-white text-center text-lg font-semibold hover:scale-[1.03] transition-transform duration-300;
+}
+</style>
+
+<script>
+// Duplicate the same template card 6 times into each column
+document.addEventListener('DOMContentLoaded', () => {
+  const template = document.querySelector('#card-template');
+  document.querySelectorAll('.scroll-group').forEach(group => {
+    for (let i = 0; i < 6; i++) {
+      const clone = template.content.cloneNode(true);
+      group.appendChild(clone);
+    }
+  });
+});
+</script>
+
+
+
+<section id="contact" class="relative py-16 bg-black overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 z-0">
+    <img src="images/contact.png" alt="Contact Background" class="w-full h-full object-cover opacity-20" />
+    <div class="absolute inset-0 bg-gradient-to-br from-black/90 via-pink-900/20 to-black/80 opacity-95"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
+    <h2 class="text-4xl font-bold text-center text-pink-500 drop-shadow-[0_0_10px_#ff3cac] tracking-widest uppercase mb-16">
+      Contact Us
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- LEFT Column (Contact Details + Hostel) -->
+      <div class="space-y-10">
+        
+        <!-- Location -->
+        <div class="flex items-start gap-4">
+          <svg class="w-8 h-8 text-red-400 animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 12l4.243-4.243M6.343 7.343L10.586 12 6.343 16.657" />
+          </svg>
+          <div>
+            <h4 class="text-xl font-semibold text-green-500 drop-shadow-[0_0_15px_#ff0080] tracking-wide">Location</h4>
+            <p class="text-gray-300">Vel Tech High Tech Dr. RR Dr. SR Engineering College,<br>Avadi, Chennai - 600062</p>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="flex items-start gap-4">
+          <svg class="w-8 h-8 text-red-400 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h12M9 3v2m3 10H3m6 0v2m9 0l2 2m-2-2l2-2" />
+          </svg>
+          <div>
+            <h4 class="text-xl font-semibold text-green-500 drop-shadow-[0_0_15px_#ff0080] tracking-wide">Phone</h4>
+            <p class="text-gray-300">+91 98765 43210</p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="flex items-start gap-4">
+          <svg class="w-8 h-8 text-red-400 animate-spin-slow" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 16V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8" />
+          </svg>
+          <div>
+            <h4 class="text-xl font-semibold text-green-500 drop-shadow-[0_0_15px_#ff0080] tracking-wide">Email</h4>
+            <p class="text-gray-300">electrothrive@veltech.ac.in</p>
+          </div>
+        </div>
+
+        <!-- Bus Routes -->
+        <div class="flex items-start gap-4">
+          <svg class="w-8 h-8 text-red-400 animate-ping" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          <div>
+            <h4 class="text-xl font-semibold text-green-500 drop-shadow-[0_0_15px_#ff0080] tracking-wide">Bus Routes</h4>
+            <p class="text-gray-300">
+              Buses from Avadi, Ambattur, Tambaram, Koyambedu, Red Hills.<br>
+              <span class="text-sm text-pink-200 italic">Check college map for details.</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Hostel Stay for Outsiders -->
+        <div class="flex items-start gap-4">
+          <svg class="w-8 h-8 text-red-400 animate-pulse" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0 2-2 2-2 4s2 2 2 4M12 3v4m0 4v.01" />
+          </svg>
+          <div>
+            <h4 class="text-xl font-semibold text-green-500 drop-shadow-[0_0_15px_#ff0080] tracking-wide">Hostel Stay (For Outsiders)</h4>
+            <p class="text-gray-300">
+              Limited accommodation for participants from outside Chennai.<br>
+              Separate hostels for boys and girls with 24/7 security & amenities.<br>
+              <span class="text-sm text-pink-200 italic">First-come-first-serve. ID proof mandatory.</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT Column (Google Map Embed) -->
+      <div class="rounded-2xl overflow-hidden shadow-xl border border-pink-600/40">
+        <iframe class="w-full h-[400px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15557.168642682642!2d80.10871015!3d13.1148519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5261fa6dd781ab%3A0xaeb7f84539f24d7c!2sVel%20Tech%20High%20Tech%20Dr.%20Rangarajan%20Dr.%20Sakunthala%20Engineering%20College!5e0!3m2!1sen!2sin!4v1622453671380!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <script src="script.js"></script>
+   
+
+  </body>
+</html>

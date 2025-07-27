@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IPL Action | Electro Thrive</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .nav-link {
+      position: relative;
+      display: inline-block;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #ffffff;
+      transition: width 0.3s ease-in-out;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-black text-white scroll-smooth">
+
+<!-- Navbar -->
+<nav class="w-full fixed top-0 left-0 z-50 backdrop-blur-md bg-black/40 shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
+    <div class="text-white text-2xl font-bold tracking-wider drop-shadow-md">
+      <img class="w-28" src="../images/ecltrothrive-cutout.png" alt="Electro Thrive Logo" />
+    </div>
+    <ul class="hidden md:flex items-center space-x-8 text-white font-medium">
+      <li><a href="#home" class="nav-link hover:text-yellow-400 transition">Home</a></li>
+      <li><a href="#rules" class="nav-link hover:text-yellow-400 transition">Rules</a></li>
+      <li><a href="#coordinators" class="nav-link hover:text-yellow-400 transition">Coordinators</a></li>
+      <li>
+        <a href="#register" class="hidden lg:inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-yellow-500/30 transition-transform transform hover:scale-105 duration-300">
+          Register Now
+        </a>
+      </li>
+    </ul>
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="md:hidden hidden flex-col bg-black/90 text-white px-6 py-4 space-y-4">
+    <a href="#home" class="block nav-link">Home</a>
+    <a href="#rules" class="block nav-link">Rules</a>
+    <a href="#coordinators" class="block nav-link">Coordinators</a>
+  </div>
+</nav>
+
+<!-- Home Section with Video Background -->
+<section id="home" class="relative min-h-screen flex items-center justify-center text-center px-6">
+  <!-- Video Background -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="../videos/iplauction.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
+
+  <!-- Content -->
+  <div class="z-20 max-w-3xl mx-auto space-y-8">
+    <h1 class="text-5xl md:text-6xl font-bold text-yellow-400 drop-shadow-md">IPL Action</h1>
+    <p class="text-lg text-gray-300">
+      Swing into action with our IPL-inspired showdown! Predict, play and prove your cricket IQ!
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a 
+        href="images/ipl-poster.png" 
+        download="ElectroThrive_IPLAction_Poster.png" 
+        class="bg-transparent border-2 border-yellow-400 text-yellow-300 font-medium py-2 px-6 rounded-full hover:bg-yellow-600 hover:text-white transition duration-300"
+      >
+        🏏 Download Poster
+      </a>
+      <a 
+        href="#register" 
+        class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg shadow-yellow-400/30 transition-transform transform hover:scale-105 duration-300"
+      >
+        🔥 Register Now
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Rules Section -->
+<section id="rules" class="py-20 px-6 bg-[#1f1f1f] bg-gradient-to-br from-[#111111] via-black to-[#1a1a1a]">
+  <div class="max-w-6xl mx-auto bg-black/60 p-8 rounded-xl shadow-lg">
+    <h2 class="text-4xl font-bold text-yellow-400 mb-8">Rules & Format</h2>
+    <ul class="list-disc list-inside text-gray-200 space-y-4 text-lg">
+      <li>Team-based event (2–3 members per team)</li>
+      <li>Three rounds: Cricket Quiz, Auction Simulation, and Match Prediction</li>
+      <li>Quiz includes general knowledge, IPL stats, and live commentary decoding</li>
+      <li>Each team gets a virtual budget to bid for players during the auction</li>
+      <li>Prediction round involves choosing match outcomes based on simulated conditions</li>
+      <li>Fair play and sportsmanship are expected at all times</li>
+      <li>Carry college ID; mobile use during quiz is prohibited</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Coordinators Section -->
+<section id="coordinators" class="py-20 px-6 bg-gradient-to-br from-[#121212] via-[#1a1a1a] to-black">
+  <div class="max-w-6xl mx-auto bg-black/70 p-8 rounded-xl">
+    <h2 class="text-4xl font-bold text-yellow-400 mb-12 text-center">Event Coordinators</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-gray-900 rounded-xl p-6 shadow-lg border-l-4 border-yellow-400">
+        <h3 class="text-xl font-semibold text-white">Mr. Rajesh Menon</h3>
+        <p class="text-gray-400">Assistant Professor, CSE Dept</p>
+        <p class="mt-2 text-gray-300">📞 +91 88234 55667</p>
+      </div>
+      <div class="bg-gray-900 rounded-xl p-6 shadow-lg border-l-4 border-yellow-400">
+        <h3 class="text-xl font-semibold text-white">Ms. Kavya S</h3>
+        <p class="text-gray-400">Student Coordinator</p>
+        <p class="mt-2 text-gray-300">📞 +91 97856 99874</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-black border-t border-yellow-500 py-6 text-center text-gray-500">
+  © 2025 Electro Thrive | All Rights Reserved
+</footer>
+
+<!-- JS for mobile nav -->
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+</html>
