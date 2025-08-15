@@ -995,11 +995,11 @@
     }
 
     .animate-scroll-down {
-      animation: scrollDown 30s linear infinite;
+      animation: scrollDown 10s linear infinite;
     }
 
     .animate-scroll-up {
-      animation: scrollUp 30s linear infinite;
+      animation: scrollUp 10s linear infinite;
     }
 
     .card-custom {
@@ -1131,5 +1131,86 @@
 
 
 </body>
+<script>
+  // Coordinators data with image paths and names
+  const coordinators = [
+    { name: "ABDUL KAREEM M(III-YR)", image: "images/coordinator/ABDUL KAREEM M(III-YR).jpg" },
+    { name: "ABISH S", image: "images/coordinator/ABISH S.jpg" },
+    { name: "Prabanjan A (Final year)", image: "images/coordinator/Prabanjan A (Final year).jpg" },
+    { name: "Akash S (III - YR)", image: "images/coordinator/Akash S (III - YR).jpg" },
+    { name: "BARATHWAJ S (III-YR)", image: "images/coordinator/BARATHWAJ S (III-YR).jpg" },
+    { name: "Benjamine 2nd yr", image: "images/coordinator/Benjamine 2nd yr.jpg" },
+    { name: "DEEKSHIDHA KR", image: "images/coordinator/DEEKSHIDHA KR.jpg" },
+    { name: "Gayathri V III-yr", image: "images/coordinator/Gayathri V III-yr.jpg" },
+    { name: "Giridharan R(Final year)", image: "images/coordinator/Giridharan R(Final year).jpg" },
+    { name: "JAGADEESH B (II YR)", image: "images/coordinator/JAGADEESH B (II YR).jpg" },
+    { name: "K. Vasanth", image: "images/coordinator/K. Vasanth.jpg" },
+    { name: "Mathan 2nd year", image: "images/coordinator/Mathan 2nd year.jpg" },
+    { name: "MOHANAPRIYA M (III Year)", image: "images/coordinator/MOHANAPRIYA M (III Year).jpg" },
+    { name: "Priyanga S (III - year)", image: "images/coordinator/Priyanga S (III - year).jpg" },
+    { name: "Reshin Paul R.S", image: "images/coordinator/Reshin Paul R.S.png" },
+    { name: "Rithik TS", image: "images/coordinator/rithik.jpg" },
+    { name: "S S Daarmick", image: "images/coordinator/S S Daarmick.jpg" },
+    { name: "Sanjay Kumar E (final year)", image: "images/coordinator/Sanjay Kumar E (final year).jpg" },
+    { name: "Sanjay.M", image: "images/coordinator/Sanjay.m.JPG" },
+    { name: "Sriharini (final year)", image: "images/coordinator/Sriharini (Final Year).png" },
+    { name: "Thanigai Raj  S (final year)", image: "images/coordinator/Thanigai Raj  S.jpg" },
+    { name: "Vasanthan.m", image: "images/coordinator/Vasanthan.m.jpg" },
+    { name: "Bharath", image: "images/coordinator/❖𝙱 𝙷 𝙰 𝚁 𝙰 𝚃 𝙷 (2007).jpg" }
+  ];
 
+  // Function to create a coordinator card
+  function createCoordinatorCard(coordinator) {
+    const card = document.createElement('div');
+    card.className = 'card-custom';
+    
+    card.innerHTML = `
+      <div class="flex justify-end px-4 pt-4">
+        <button class="text-gray-400 hover:text-white">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 3">
+            <path d="M2 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Zm6.041 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3ZM14 0a1.5 1.5 0 110 3 1.5 1.5 0 010-3Z" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col items-center pb-6">
+        <img class="w-20 h-20 mb-3 rounded-full shadow-lg border border-pink-400" 
+             src="${coordinator.image}" 
+             alt="${coordinator.name}" />
+        <h5 class="mb-1 text-lg font-medium text-white">${coordinator.name}</h5>
+      </div>
+    `;
+    
+    return card;
+  }
+
+  // Populate coordinator cards when DOM is loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    const scrollGroups = document.querySelectorAll('.scroll-group');
+    
+    // Clear existing placeholder content
+    scrollGroups.forEach(group => {
+      group.innerHTML = '';
+    });
+
+    // Distribute coordinators evenly across scroll groups
+    scrollGroups.forEach((group, index) => {
+      const coordinatorsPerGroup = Math.ceil(coordinators.length / scrollGroups.length);
+      const startIdx = index * coordinatorsPerGroup;
+      const endIdx = startIdx + coordinatorsPerGroup;
+      const groupCoordinators = coordinators.slice(startIdx, endIdx);
+      
+      // Add coordinators to this group
+      groupCoordinators.forEach(coordinator => {
+        const card = createCoordinatorCard(coordinator);
+        group.appendChild(card);
+      });
+      
+      // Duplicate content for seamless scrolling animation
+      if (groupCoordinators.length > 0) {
+        const cloneGroup = group.cloneNode(true);
+        group.parentNode.appendChild(cloneGroup);
+      }
+    });
+  });
+</script>
 </html>
