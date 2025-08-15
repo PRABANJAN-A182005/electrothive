@@ -37,26 +37,26 @@
 
     <!-- Glassy Navbar -->
     <nav class="w-full fixed top-0 left-0 z-50 backdrop-blur-md bg-black/30 shadow-md">
-      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 py-2 xs:py-3 sm:py-4 flex items-center justify-between">
 
         <!-- Logo -->
         <div class="text-white text-2xl font-bold tracking-wider drop-shadow-md">
-          <img class="w-28" src="images/ecltrothrive-cutout.png" alt="Electro Thrive Logo" />
+          <img class="w-16 xs:w-20 sm:w-28" src="images/ecltrothrive-cutout.png" alt="Electro Thrive Logo" />
         </div>
 
         <!-- Desktop Navigation -->
-        <ul class="hidden md:flex items-center space-x-8 text-white font-medium">
-          <li><a href="#home" class="nav-link hover:text-pink-400 transition">Home</a></li>
-          <li><a href="#about" class="nav-link hover:text-pink-400 transition">About</a></li>
-          <li><a href="#events" class="nav-link hover:text-pink-400 transition">Events</a></li>
-          <li><a href="#departments" class="nav-link hover:text-pink-400 transition">Departments</a></li>
-          <li><a href="#coordinators" class="nav-link hover:text-pink-400 transition">Co-ordinators</a></li>
-          <li><a href="#contact" class="nav-link hover:text-pink-400 transition">Contact</a></li>
+        <ul class="hidden md:flex items-center space-x-4 lg:space-x-8 text-white font-medium">
+          <li><a href="#home" class="nav-link hover:text-pink-400 transition text-sm lg:text-base">Home</a></li>
+          <li><a href="#about" class="nav-link hover:text-pink-400 transition text-sm lg:text-base">About</a></li>
+          <li><a href="#events" class="nav-link hover:text-pink-400 transition text-sm lg:text-base">Events</a></li>
+          <li><a href="#departments" class="nav-link hover:text-pink-400 transition text-sm lg:text-base">Departments</a></li>
+          <li><a href="#coordinators" class="nav-link hover:text-pink-400 transition text-sm lg:text-base">Co-ordinators</a></li>
+          <li><a href="#contact" class="nav-link hover:text-pink-400 transition text-sm lg:text-base">Contact</a></li>
 
           <!-- Register Button (Hidden on Mobile) -->
           <li>
-            <a href=" https://docs.google.com/forms/d/e/1FAIpQLSffvGmBytqKrDXCVF2uJGBBONWDl0I0b-FvkcMdMGKX4rpGew/viewform?usp=sharing&ouid=112786151182421514292"
-              class="hidden lg:inline-block bg-pink-600 hover:bg-pink-700 text-white font-semibold py-2 px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSffvGmBytqKrDXCVF2uJGBBONWDl0I0b-FvkcMdMGKX4rpGew/viewform?usp=sharing&ouid=112786151182421514292"
+              class="hidden lg:inline-block bg-pink-600 hover:bg-pink-700 text-white font-semibold py-1 lg:py-2 px-4 lg:px-6 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300 text-sm lg:text-base">
               Register Now
             </a>
           </li>
@@ -64,9 +64,9 @@
 
         <!-- Hamburger Button for Mobile -->
         <div class="md:hidden">
-          <button id="menu-toggle" class="text-white text-3xl focus:outline-none">
+          <button id="menu-toggle" class="text-white focus:outline-none">
             <svg id="hamburger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" class="w-8 h-8">
+              stroke="currentColor" class="w-6 h-6 xs:w-7 xs:h-7">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
             </svg>
           </button>
@@ -74,51 +74,56 @@
       </div>
 
       <!-- Mobile Navigation -->
-      <div id="mobile-menu" class="md:hidden hidden flex-col bg-black bg-opacity-90 text-white px-6 py-4 space-y-4">
-        <a href="#home" class="block nav-link">Home</a>
-        <a href="#about" class="block nav-link">About</a>
-        <a href="#events" class="block nav-link">Events</a>
-        <a href="#coordinators" class="block nav-link">Co-ordinators</a>
-        <a href="#contact" class="block nav-link">Contact</a>
+      <div id="mobile-menu" class="md:hidden hidden flex-col bg-black bg-opacity-90 text-white px-4 py-3 space-y-3">
+        <a href="#home" class="block nav-link py-1">Home</a>
+        <a href="#about" class="block nav-link py-1">About</a>
+        <a href="#events" class="block nav-link py-1">Events</a>
+        <a href="#departments" class="block nav-link py-1">Departments</a>
+        <a href="#coordinators" class="block nav-link py-1">Co-ordinators</a>
+        <a href="#contact" class="block nav-link py-1">Contact</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSffvGmBytqKrDXCVF2uJGBBONWDl0I0b-FvkcMdMGKX4rpGew/viewform?usp=sharing&ouid=112786151182421514292"
+          class="block bg-pink-600 hover:bg-pink-500 text-white font-semibold py-2 px-4 rounded-full text-center mt-2">
+          Register Now
+        </a>
       </div>
     </nav>
 
     <!-- College Banner at Top -->
-    <div class="w-full flex justify-center pt-16">
-      <div class="text-center">
-        <img src="images/college logo.png" alt="College Banner" class="mx-auto mb-4">
-        <h1 class="text-white text-4xl -mt-14 font-semibold drop-shadow-[0_0_10px_#ff007f]">
+    <div class="w-full flex justify-center pt-12 xs:pt-16 sm:pt-20">
+      <div class="text-center px-2">
+        <img src="images/college logo.png" alt="College Banner" class="mx-auto mb-1 xs:mb-2 sm:mb-4 w-full xs:w-16 sm:h-80">
+        <h1 class="text-white  xs:text-sm sm:text-lg md:text-2xl lg:text-4xl -mt-2 xs:-mt-10 sm:-mt-34 text-2xl font-semibold drop-shadow-[0_0_10px_#ff007f] px-2">
           Electronics and Communication Engineering Department Presents
         </h1>
       </div>
     </div>
 
     <!-- Hero Content with Video - Centered -->
-    <div class="min-h-screen flex flex-col items-center justify-center -mt-56 px-6 pt-4 md:pt-8">
+    <div class="min-h-screen flex flex-col items-center justify-center -mt-64 xs:-mt-32 sm:-mt-40 md:-mt-56 px-3 xs:px-4 pt-2 xs:pt-4 sm:pt-8">
 
-      <!-- Video Box - Centered -->
-      <div class="w-full max-w-2xl relative px-4">
-        <div class="w-full aspect-video">
-          <video autoplay muted loop playsinline
-            class="rounded-xl shadow-lg w-full h-full object-cover mix-blend-screen opacity-100 z-0">
-            <source src="videos/TITLE CARD INTRO.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
+      <!-- Video Box - Centered with landscape optimization -->
+      <div class="w-full max-w-[320px] xs:max-w-sm sm:max-w-lg md:max-w-3xl relative px-2 sm:px-4 landscape:max-w-lg landscape:md:max-w-3xl">
+  <div class="w-full aspect-video">
+    <video autoplay muted loop playsinline
+      class="rounded-xl shadow-lg w-full h-full object-cover mix-blend-screen opacity-100 z-0">
+      <source src="videos/TITLE CARD INTRO.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
 
-      <!-- Tagline / Description - Centered -->
-      <div class="max-w-2xl text-center -mt-10">
-        <p class="text-yellow-50 mb-8 text-lg leading-relaxed">
-          A battle of circuits, code, and creativity.<br />
+      <!-- Tagline / Description - Centered with landscape adjustments -->
+      <div class="w-full max-w-[280px] xs:max-w-xs sm:max-w-md md:max-w-2xl text-center mt-6 xs:-mt-4 sm:-mt-8 md:-mt-10 px-2 landscape:max-w-md landscape:md:max-w-2xl">
+        <p class="text-yellow-50 mb-3 xs:mb-4 sm:mb-6 md:mb-8 text-xs xs:text-sm sm:text-base md:text-lg leading-relaxed landscape:text-sm landscape:sm:text-base">
+          A battle of circuits, code, and creativity.<br class="hidden xs:block" />
           <span class="text-pink-500 font-semibold">Electro Thrive 2025</span> is not just an event – it's a challenge
           to your tech instincts. Join us for robotics, IoT games, coding clashes, and more with Squid Game-inspired energy.
         </p>
 
         <!-- Register Button - Centered -->
         <div class="text-center">
-          <a href=" https://docs.google.com/forms/d/e/1FAIpQLSffvGmBytqKrDXCVF2uJGBBONWDl0I0b-FvkcMdMGKX4rpGew/viewform?usp=sharing&ouid=112786151182421514292"
-            class="inline-block bg-pink-600 hover:bg-pink-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSffvGmBytqKrDXCVF2uJGBBONWDl0I0b-FvkcMdMGKX4rpGew/viewform?usp=sharing&ouid=112786151182421514292"
+            class="inline-block bg-pink-600 hover:bg-pink-500 text-white font-semibold py-1 xs:py-2 sm:py-3 px-4 xs:px-6 sm:px-8 rounded-full shadow-lg shadow-pink-500/30 transition-transform transform hover:scale-105 duration-300 text-xs xs:text-sm sm:text-base">
             Register Now
           </a>
         </div>
